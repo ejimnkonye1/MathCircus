@@ -2,8 +2,8 @@
 Welcome to Math Circus! 🎪 This is an engaging math quiz application designed for kids to practice their arithmetic skills in a fun and interactive way.
 
 ## Features
-1.User Sign-In: Kids can sign in with their name to personalize their experience.
-2.Quiz Selection: Choose from four different types of math operations:
+1 User Sign-In: Kids can sign in with their name to personalize their experience.
+2 Quiz Selection: Choose from four different types of math operations:
 * Addition
 * Subtraction
 * Multiplication
