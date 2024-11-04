@@ -1,6 +1,5 @@
 
 import './App.css'
-import { NameProvider } from './Context/NameContext'
 import { BrowserRouter as Router ,Routes ,Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import Login from './pages/Login'
@@ -15,7 +14,7 @@ function App() {
 
   return (
     <>
-      <NameProvider>
+   
         <Router>
           <Routes>
             <Route path='/' element={<Login/>} />
@@ -27,7 +26,7 @@ function App() {
             <Route path='/score' element={<Score/>}/>
           </Routes>
         </Router>
-      </NameProvider>
+     
     </>
   )
 }

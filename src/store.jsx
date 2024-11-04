@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 const initialState =  {
+    name:'',
     score: 0,
     HighScore: 0,
     isAddition : true,
@@ -9,6 +10,11 @@ const initialState =  {
 }
 const reducer = ( state = initialState, action) => {
 switch (action.type) {
+    case "SET_NAME":
+      return{
+        ...state,
+        name: action.payload
+      }
     case "SET_SCORE":
               return {
             ...state,

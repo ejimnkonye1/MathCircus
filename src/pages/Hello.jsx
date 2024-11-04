@@ -1,12 +1,24 @@
-import  { useContext, useEffect, useState } from 'react';
-import { NameContext } from '../Context/NameContext';
+import  {  useEffect, useState } from 'react';
+
+import { useSelector } from 'react-redux';
 
 const Hello = () => {
-  const { name } = useContext(NameContext);
+  const [name, setName] = useState('')
+ const Name = useSelector((state)=> state.name)
   const [scale, setScale] = useState(0); 
 
-  
+  useEffect(() => {
+    if(Name) {
+        localStorage.setItem('savedName', Name)
+    }
+}, [Name])
+  useEffect(() => {
+  const storedName = localStorage.getItem('savedName') 
 
+  if(storedName) {
+      setName(storedName)
+  }
+},[])
   useEffect(() => {
     const timer = setTimeout(() => {
       setScale(1); // 

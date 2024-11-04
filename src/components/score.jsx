@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-import { useContext } from "react";
-import { NameContext } from "../Context/NameContext";
 import { useNavigate } from "react-router-dom";
 
 
@@ -30,7 +28,7 @@ export const Score = () => {
     navigate('/home')
 
   }
-  const { name } = useContext(NameContext)
+  const name = useSelector((state)=> state.name)
   const score = useSelector((state) => state.score)
   const highscore = useSelector((state) => state.HighScore)
     return (

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { NameContext } from '../Context/NameContext';
+import { useDispatch } from 'react-redux';
+import { setName } from '../action';
 
 const Login = () => {
   const [bgColor, setBgColor] = useState('bg-white');
@@ -9,8 +10,7 @@ const Login = () => {
   const [error, setError] = useState(false);
   const [errorTimerMessage, setErrorTimeMessage] = useState('');
   const [showError, setShowError] = useState(false);
-
-  const { setName } = useContext(NameContext);
+  const dispatch = useDispatch();
 
 
   const handleInputChange = (e) => {
@@ -51,8 +51,8 @@ const Login = () => {
       displaySequentialErrorMessages();
       console.log("Error: Name cannot be empty!");
     } else {
-      alert(`Welcome ${inputValue.toUpperCase()}`);
-      setName(inputValue)
+      // alert(`Welcome ${inputValue.toUpperCase()}`);
+      dispatch(setName(inputValue))
       navigate('/home');
     }
   };
@@ -60,7 +60,7 @@ const Login = () => {
   return (
     <>
       <div className='bg-background h-screen flex items-center justify-center cursor-pointer font-sans'>
-      <span className='absolute top-4 left-8 text-4xl text-white font-bold'>QUIZNEST.</span>
+      <span className='absolute top-4 left-8 text-4xl text-white font-bold'>MathCircus</span>
         <div className='bg-primary flex flex-col max-w-full mx-4 p-8 rounded gap-8'>
           <h2 className='font-semibold font-poppins leading-loose text-xl text-background'>
             Enter your name to begin

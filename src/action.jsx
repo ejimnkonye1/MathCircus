@@ -1,3 +1,7 @@
+export const setName = (name) => ({
+    type: "SET_NAME",
+    payload:name
+})
 export const setScore = (score) => ({
     type: "SET_SCORE",
     payload:score
