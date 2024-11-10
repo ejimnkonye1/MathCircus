@@ -10,7 +10,7 @@ export const SubtractionQuestion = {
       answer: 6
   },
   question3: {
-      question: "14 - 3 = ?",
+      question: "14-3 = ?",
       options: [9, 10, 11, 12],
       answer: 11
   },

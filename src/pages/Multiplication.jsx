@@ -12,7 +12,7 @@ import { GetRandomQuestions } from '../components/random.jsx';
 const Multiplication = () => {
 
     const isMuliplication = useSelector((state) => state.isMuliplication);
-    // const isMuliplication = true; 
+   
     const bgColor = isMuliplication ? 'bg-pink-wrong-answer-popup' : '';
     const btnColor = isMuliplication ? 'text-pink-text bg-pink-button':''
     const navigate = useNavigate()
